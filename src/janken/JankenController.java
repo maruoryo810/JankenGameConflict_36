@@ -62,4 +62,7 @@ public class JankenController {
          myHandLabel.setText("あなたの手: " + hands[myHand]);
          resultLabel.setText("結果: " + getResult(myHand, cpuHand));
      }
+
+
+
 }
