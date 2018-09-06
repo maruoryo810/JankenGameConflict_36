@@ -85,6 +85,8 @@ public class JankenView extends Application {
   vbox.setAlignment(Pos.CENTER);
   //vboxに配置するコントロールの隙間
   vbox.setSpacing(8);
+
+
   //vboxにコントロールを設置
   vbox.getChildren().addAll(cpuLabel, humanLabel, resultLabel, hbox);
 
