@@ -13,6 +13,7 @@ public class JankenController {
      private int score = 0;
 
 
+     
       private Label cpuHandLabel;
       private Label myHandLabel;
       private Label resultLabel;
