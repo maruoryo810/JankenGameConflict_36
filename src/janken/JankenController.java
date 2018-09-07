@@ -10,8 +10,11 @@ public class JankenController {
      private  static final String[] hands = {
          "グー", "チョキ", "パー"
      };
-     private int score = 0;
 
+     private int score = 0;
+     private int win = 0;
+     private int draw = 0;
+     private int lose = 0;
 
 
       private Label cpuHandLabel;
@@ -58,13 +61,12 @@ public class JankenController {
          int r = (myHand - cpuHand + 3) % 3;
 
          if(r == 2) {
-             score +=2;
-            } else if(r==1) {
-             score -=1;
-            } else {
-             score +=1;
-            }
-
+             win++;
+           } else if(r==1) {
+             lose++;
+           } else {
+             draw++;
+           }
 
          return (r == 2) ? "あなたの勝ち！" : ((r == 1) ? "あなたの負け！" : "あいこ！");
      }
@@ -73,6 +75,7 @@ public class JankenController {
          cpuHandLabel.setText("コンピュータの手: " + hands[cpuHand]);
          myHandLabel.setText("あなたの手: " + hands[myHand]);
          resultLabel.setText("結果: " + getResult(myHand, cpuHand));
-         scoreLabel.setText(" Score:"+score);
+         scoreLabel.setText("Score:"+score+" Win:"+win+" Draw:"+draw+" Lose:"+lose);
+
      }
 }
