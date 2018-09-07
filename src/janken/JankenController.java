@@ -10,6 +10,8 @@ public class JankenController {
      private  static final String[] hands = {
          "グー", "チョキ", "パー"
      };
+     private int score = 0;
+
 
       private Label cpuHandLabel;
       private Label myHandLabel;
